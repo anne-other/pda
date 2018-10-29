@@ -11,4 +11,11 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
+  it('should add', function () {
+    calculator.previousTotal = 4;
+    calculator.add(1);
+    total = parseFloat(calculator.runningTotal);
+    assert.strictEqual(total, 5);
+  })
+
 });
