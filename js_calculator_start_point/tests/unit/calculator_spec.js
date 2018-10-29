@@ -18,4 +18,11 @@ describe('calculator', function () {
     assert.strictEqual(total, 5);
   })
 
+  it('should subtract', function () {
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    total = parseFloat(calculator.runningTotal);
+    assert.strictEqual(total, 3);
+  })
+
 });
