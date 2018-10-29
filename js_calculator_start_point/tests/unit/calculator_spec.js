@@ -32,4 +32,11 @@ describe('calculator', function () {
     assert.strictEqual(total, 15);
   })
 
+  it('should divide', function () {
+    calculator.previousTotal = 21;
+    calculator.divide(7);
+    total = parseFloat(calculator.runningTotal);
+    assert.strictEqual(total, 3);
+  })
+
 });
