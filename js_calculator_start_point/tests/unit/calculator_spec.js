@@ -25,4 +25,11 @@ describe('calculator', function () {
     assert.strictEqual(total, 3);
   })
 
+  it('should multiply', function () {
+    calculator.previousTotal = 3;
+    calculator.multiply(5);
+    total = parseFloat(calculator.runningTotal);
+    assert.strictEqual(total, 15);
+  })
+
 });
