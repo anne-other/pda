@@ -59,7 +59,16 @@ describe('calculator functionality', function() {
     element(by.css('#operator_subtract')).click();
     element(by.css('#number3')).click();
     element(by.css('#operator_equals')).click();
-    expect(running_total.getAttribute('value')).to.eventually.equal('-1');
+    expect(running_total.getAttribute('value')).to.eventually.equal('-1')
+  })
+
+  it('should be able to handle decimals', function () {
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number3')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('1.5')
   })
 
 });
